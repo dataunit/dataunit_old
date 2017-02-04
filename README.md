@@ -1,2 +1,2 @@
 # dataunit
-xUnit testing framework for data applications
+xUnit testing framework for data applications.
