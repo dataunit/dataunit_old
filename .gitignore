@@ -1,3 +1,6 @@
+# temp xlsx files
+~$*.xlsx
+
 # Visual Studio Code files
 .vscode
 
