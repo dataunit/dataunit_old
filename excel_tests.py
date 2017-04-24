@@ -29,7 +29,13 @@ class TestExcel(unittest.TestCase):
         ws = wb["Test Cases"]
         self.assertEqual(ws.cell(row=1,column=1).value, "Test Case ID", "Test Case ID column not found")
 
-        
-
         # delete file
         os.remove(wb_path)
+
+
+    def test_load_workbook(self):
+        wb_path = '/Users/dmoore/Documents/projects/dataunit/test_case_workbook.v2.xlsx'
+        wb = excel.load_workbook(wb_path)
+        self.assertEqual(wb.sheet_by_index(0).name,"Test Cases")
+
+    

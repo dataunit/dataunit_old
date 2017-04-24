@@ -1,5 +1,8 @@
 import openpyxl
 import os
+import tablib
+import xlrd
+
 
 def generate_workbook(workbook_file_path):
 
@@ -14,7 +17,21 @@ def generate_workbook(workbook_file_path):
 
     # remove default sheet
     del wb["Sheet"]
-    #wb.remove("Sheet")
 
     wb.save(workbook_file_path)
 
+def get_workbook_metadata(workbook_file_path):
+    pass
+
+def load_workbook(workbook_file_path):
+    #dataset = tablib.Dataset().xlsx = open(workbook_file_path,"rb").read()
+    #databook = tablib.Databook().load("xlsx", open(workbook_file_path).read())
+    #print(dataset[0])
+    
+    #wb = openpyxl.load_workbook(workbook_file_path)
+    #print(wb.sheetnames)
+    
+    wb = xlrd.open_workbook(workbook_file_path)
+    return wb
+
+    
