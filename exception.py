@@ -1,0 +1,2 @@
+class SheetMissingError(Exception):
+    pass
